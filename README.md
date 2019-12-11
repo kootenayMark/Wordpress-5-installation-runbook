@@ -27,7 +27,7 @@ sudo apt-get install mysql-server
 * Enter Y to agree to disk space requirements.
 * Choose a password for MySQL. Make it strong and unique.
 * Re-enter password to confirm.
-* Secure MySQL
+#### Secure MySQL
 ```
 mysql_secure_installation
 ```
@@ -55,7 +55,7 @@ Copy and paste this php script into the open editor.
 ```
 * Press <kbd>Ctrl-o</kbd> to save your changes.
 * Press <kbd>Ctrl-x</kbd> to exit the editor.
-* Delete the index.html file.
+#### Delete the index.html file.
 ```
 sudo rm index.html
 ```
@@ -64,6 +64,41 @@ Restart Apache just to be sure your changes have taken effect.
 sudo systemctl restart apache2
 ```
 ### Now when you enter your server's IP adress in your browser you should see The PHP page with the version that your server is running (7.2) 
+# Step 4 - Now you're ready to install wordpress
+We should still be in the HTML directory /var/www/html/
+#### We will download The latest version of WordPress
+```
+wget -c http://wordpress.org/latest.tar.gz
+```
+Extract file into /wordpress/ directory
+```
+tar -xzvf latest.tar.gz
+```
+Set permissions for the wordpress directory just created.
+```
+chown -R www-data:www-data /var/www/html/wordpress
+```
+# Step 6 - Create a database in MySQL for WordPress
+Login to MySQL
+```
+mysql -u root -p
+```
+* Enter your MySQL password created in step 3 above.
+#### Create a new MySQL database for WordPress installation.
+* wordpress_db can be substituted with any name you like.
+```
+CREATE DATABASE wordpress_db;
+```
+Where wordpress_user is a new user_name of your choice and PASSWORD is a new password for the user.
+```
+GRANT ALL PRIVILEGES ON wordpress_db.* TO 'wordpress_user'@'localhost' IDENTIFIED BY 'PASSWORD';
+```
+```
+FLUSH PRIVILEGES;
+```
+```
+exit;
+```
 
 
 
