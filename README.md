@@ -83,7 +83,7 @@ Login to MySQL
 ```
 mysql -u root -p
 ```
-* Enter your MySQL password created in step 3 above.
+* Enter your MySQL root password created in step 3 above.
 #### Create a new MySQL database for WordPress installation.
 * wordpress_db can be substituted with any name you like.
 ```
