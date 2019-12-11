@@ -55,7 +55,7 @@ Copy and paste this php script into the open editor.
 ```
 * Press <kbd>Ctrl-o</kbd> to save your changes.
 * Press <kbd>Ctrl-x</kbd> to exit the editor.
-* Delete the index.html file.
+Delete the index.html file.
 ```
 sudo rm index.html
 ```
