@@ -8,13 +8,13 @@ Ubuntu 16.04 server installed and configured with sudo (administrator privlages)
 
 # Step 1 - Install Apache2 #
 Update the Ubuntu pakage manager
-`sudo apt-get update`
+```sudo apt-get update```
 Install Apache
-`sudo apt-get install apache2`
+```sudo apt-get install apache2```
 Enter password when prompted.
 Enter Y to agree to disk space requirements.
 You can ignore the warning about Global name server.
-### test that apache is up and running by entering your server's ip address in a browser and you should see the Ubuntu Apache2 Default page ###
+### Test that apache is up and running by entering your server's ip address in a browser and you should see the Ubuntu Apache2 Default page ###
 # Step 2 - Install MySQL #
 Install MySQL version 5.7
 `sudo apt-get install mysql-server`
