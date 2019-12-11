@@ -1,16 +1,20 @@
 # Wordpress-5-installation-runbook
 Complete guide to installing wordpress 5 on Ubuntu 16.04 server.
-# Introduction #
+# Introduction 
 A complete guide to installing wordpress on your Ubuntu 16.04 server via command line. 
 Includes installing the LAMP stack - Linux, Apache, MySql, and PHP needed to install wordpress.
-## Requirements ##
+## Requirements 
 Ubuntu 16.04 server installed and configured with sudo (administrator privlages).
 
-# Step 1 - Install Apache2 #
+# Step 1 - Install Apache2 
 Update the Ubuntu pakage manager
-```sudo apt-get update```
+```
+sudo apt-get update
+```
 Install Apache
-```sudo apt-get install apache2```
+```
+sudo apt-get install apache2
+```
 Enter password when prompted.
 Enter Y to agree to disk space requirements.
 You can ignore the warning about Global name server.
