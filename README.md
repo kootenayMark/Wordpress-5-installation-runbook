@@ -74,7 +74,7 @@ Extract file into /wordpress/ directory
 ```
 tar -xzvf latest.tar.gz
 ```
-Set permissions for the wordpress directory just created.
+Set permissions for the wordpress directory you just created.
 ```
 chown -R www-data:www-data /var/www/html/wordpress
 ```
@@ -85,20 +85,55 @@ mysql -u root -p
 ```
 * Enter your MySQL root password created in step 3 above.
 #### Create a new MySQL database for WordPress installation.
-* wordpress_db can be substituted with any name you like.
+* wordpress_db is the name of your database (can be anything).
 ```
 CREATE DATABASE wordpress_db;
 ```
-Where wordpress_user is a new user_name of your choice and PASSWORD is a new password for the user.
+wordpress_user is a new user_name (your choice) and PASSWORD is the password for the user (make it strong and unique).
 ```
 GRANT ALL PRIVILEGES ON wordpress_db.* TO 'wordpress_user'@'localhost' IDENTIFIED BY 'PASSWORD';
 ```
+Make the changes to the new user take effect.
 ```
 FLUSH PRIVILEGES;
 ```
+Exit MySQL
 ```
 exit;
 ```
+Move into the wordpress directory /var/www/html/wordpress
+```
+cd wordpress
+```
+rename the the sample configuration file
+```
+mv wp-config-sample.php wp-config.php
+```
+Open and edit the wp-cofig file.
+```
+nano wp-config.php
+```
+Update the file with your database information from the beggining of this step (step 6)
+```
+// ** MySQL settings - You can get this info from your web host ** //
+/** The name of the database for WordPress */
+define('DB_NAME', 'wordpress_db');
 
+/** MySQL database username */
+define('DB_USER', 'wordpress_user');
+
+/** MySQL database password */
+define('DB_PASSWORD', 'PASSWORD');
+```
+* Press <kbd>Ctrl-o</kbd> to save your changes.
+* Press <kbd>Ctrl-x</kbd> to exit the editor.
+Restart Apache and MySQL
+```
+systemctl restart apache2
+```
+```
+systemctl restart mysql
+```
+** You're all done, you can go to your server's IP adress in the browser of your choice and follow the on screen instructions to finish the installation. __http://your_server_ip_address/wordpress__
 
 
