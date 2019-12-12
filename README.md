@@ -76,7 +76,7 @@ You should still be in the HTML directory /var/www/html/
 ```
 sudo wget -c http://wordpress.org/latest.tar.gz
 ```
-Extract file into /wordpress/ directory
+Extract file into /wordpress/ directory (it creates the wordpress directory when it extracts the file)
 ```
 sudo tar -xzvf latest.tar.gz
 ```
