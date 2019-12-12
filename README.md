@@ -132,6 +132,7 @@ define('DB_USER', 'wordpress_user');
 define('DB_PASSWORD', 'PASSWORD');
 ```
 * Press <kbd>Ctrl-o</kbd> to save your changes.
+* Press <kbd>Enter</kbd>
 * Press <kbd>Ctrl-x</kbd> to exit the editor.
 Restart Apache and MySQL
 ```
@@ -142,7 +143,7 @@ systemctl restart apache2
 systemctl restart mysql
 ```
 * Enter your sudo (admin) password
-## You're all done, you can go to your server's IP address in a browser of your choice and follow the on screen instructions to finish the installation. 
+## You're all done. You can go to your server's IP address in a browser of your choice and follow the on screen instructions to finish the installation. 
 ```
 http://your_server_ip_address/wordpress
 ```
