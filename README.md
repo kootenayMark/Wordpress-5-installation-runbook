@@ -42,8 +42,9 @@ Enter MySQL root user password (from the step above)
 # Step 3 - Install PHP 
 Install PHP 7.2
 ```
-sudo apt install php7.2 libapache2-mod-php7.2 php7.2-common php7.2-sqlite php7.2-curl php7.2-intl php7.2-mbstring php7.2-xmlrpc php7.2-mysql php7.2-gd php7.2-xml php7.2-cli php7.2-zip
+sudo apt-get install php7.0 libapache2-mod-php7.0 php7.0-mysql php7.0-curl php7.0-mbstring php7.0-gd php7.0-xml php7.0-xmlrpc php7.0-intl php7.0-soap php7.0-zip sudo apt install php7.2 libapache2-mod-php7.2 php7.2-common php7.2-sqlite php7.2-curl php7.2-intl php7.2-mbstring php7.2-xmlrpc php7.2-mysql php7.2-gd php7.2-xml php7.2-cli php7.2-zip
 ```
+* Enter Y to agree to disk space requirements.
 ### we can test that PHP is installed correctly by replacing the index.html file with an info.php file 
 Navigate to the HTML directory
 ```
@@ -73,15 +74,15 @@ sudo systemctl restart apache2
 We should still be in the HTML directory /var/www/html/
 #### We will download The latest version of WordPress
 ```
-wget -c http://wordpress.org/latest.tar.gz
+sudo wget -c http://wordpress.org/latest.tar.gz
 ```
 Extract file into /wordpress/ directory
 ```
-tar -xzvf latest.tar.gz
+sudo tar -xzvf latest.tar.gz
 ```
 Set permissions for the wordpress directory you just created.
 ```
-chown -R www-data:www-data /var/www/html/wordpress
+sudo chown -R www-data:www-data /var/www/html/wordpress
 ```
 # Step 6 - Create a database in MySQL for WordPress
 Login to MySQL
@@ -112,11 +113,11 @@ cd wordpress
 ```
 rename the the sample configuration file
 ```
-mv wp-config-sample.php wp-config.php
+sudo mv wp-config-sample.php wp-config.php
 ```
 Open and edit the wp-cofig file.
 ```
-nano wp-config.php
+sudo nano wp-config.php
 ```
 Update the file with your database information from the beggining of this step (step 6)
 ```
@@ -136,9 +137,11 @@ Restart Apache and MySQL
 ```
 systemctl restart apache2
 ```
+* Enter your sudo (admin) password
 ```
 systemctl restart mysql
 ```
+* Enter your sudo (admin) password
 ## You're all done, you can go to your server's IP adress in the browser of your choice and follow the on screen instructions to finish the installation. 
 ```
 http://your_server_ip_address/wordpress
