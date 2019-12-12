@@ -32,7 +32,7 @@ sudo apt-get install mysql-server
 mysql_secure_installation
 ```
 Enter MySQL root user password (from the step above)
-#### Answer questions about secury of MySQL
+#### Answer questions about securing MySQL settings
 1. Configuring validate password plugin - no (answering yes can create errors down the road)
 2. Change the password for root? no (but it's up to you)
 3. Remove anonymous users? yes 
@@ -45,7 +45,7 @@ Install PHP 7.0
 sudo apt-get install php7.0 libapache2-mod-php7.0 php7.0-mysql php7.0-curl php7.0-mbstring php7.0-gd php7.0-xml php7.0-xmlrpc php7.0-intl php7.0-soap php7.0-zip 
 ```
 * Enter Y to agree to disk space requirements.
-### we can test that PHP is installed correctly by replacing the index.html file with an info.php file 
+### we can test that PHP is installed correctly by replacing the index.html file with an index.php file 
 Navigate to the HTML directory
 ```
 cd /var/www/html/
@@ -65,13 +65,13 @@ Copy and paste this php script into the open editor.
 ```
 sudo rm index.html
 ```
-Restart Apache just to be sure your changes have taken effect.
+Restart Apache to be sure your changes have taken effect.
 ```
 sudo systemctl restart apache2
 ```
-### Now when you enter your server's IP adress in your browser you should see The PHP page with the version that your server is running (7.2) 
+### Now when you enter your server's IP adress in your browser you should see The PHP page with the version (7.0) that your server is running. 
 # Step 4 - Now you're ready to install wordpress
-We should still be in the HTML directory /var/www/html/
+You should still be in the HTML directory /var/www/html/
 #### We will download The latest version of WordPress
 ```
 sudo wget -c http://wordpress.org/latest.tar.gz
@@ -89,7 +89,7 @@ Login to MySQL
 ```
 mysql -u root -p
 ```
-* Enter your MySQL root password created in step 3 above.
+* Enter the MySQL root password created in step 3 above.
 #### Create a new MySQL database for WordPress installation.
 * wordpress_db is the name of your database (can be anything).
 ```
@@ -99,7 +99,7 @@ wordpress_user is a new user_name (your choice) and PASSWORD is the password for
 ```
 GRANT ALL PRIVILEGES ON wordpress_db.* TO 'wordpress_user'@'localhost' IDENTIFIED BY 'PASSWORD';
 ```
-Make the changes to the new user take effect.
+Enable the changes to the new user.
 ```
 FLUSH PRIVILEGES;
 ```
@@ -111,11 +111,11 @@ Move into the wordpress directory /var/www/html/wordpress
 ```
 cd wordpress
 ```
-rename the the sample configuration file
+Rename the the sample configuration file.
 ```
 sudo mv wp-config-sample.php wp-config.php
 ```
-Open and edit the wp-cofig file.
+Open and edit the wp-config file.
 ```
 sudo nano wp-config.php
 ```
@@ -142,7 +142,7 @@ systemctl restart apache2
 systemctl restart mysql
 ```
 * Enter your sudo (admin) password
-## You're all done, you can go to your server's IP adress in the browser of your choice and follow the on screen instructions to finish the installation. 
+## You're all done, you can go to your server's IP address in a browser of your choice and follow the on screen instructions to finish the installation. 
 ```
 http://your_server_ip_address/wordpress
 ```
