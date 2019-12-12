@@ -11,12 +11,12 @@ Update the Ubuntu package manager
 ```
 sudo apt-get update
 ```
+* Enter your sudo (admin password) when prompted.
 Install Apache
 ```
 sudo apt-get install apache2
 ```
-* Enter password when prompted.
-* Enter Y to agree to disk space requirements.
+* Enter 'Y' to agree to disk space requirements.
 * You can ignore the warning about Global name server.
 ### Test that apache is up and running by entering your server's IP address in a browser and you should see the Ubuntu Apache2 Default page ###
 # Step 2 - Install MySQL #
@@ -31,10 +31,14 @@ sudo apt-get install mysql-server
 ```
 mysql_secure_installation
 ```
-Answer questions about secury of MySQL
-1. configuring validate password plugin - no (answering yes can create errors down the road)
-2. disable remote login - yes
-3. remove test database - yes
+Enter MySQL root user password (from the step above)
+#### Answer questions about secury of MySQL
+1. Configuring validate password plugin - no (answering yes can create errors down the road)
+2. Change the password for root? no (but it's up to you)
+3. Remove anonymous users? yes 
+4. Disable remote login? yes
+5. Remove test database? yes
+Reload privilege tables now? yes
 # Step 3 - Install PHP 
 Install PHP 7.2
 ```
@@ -47,13 +51,14 @@ cd /var/www/html/
 ```
 Create and edit a new php file
 ```
-sudo nano info.php
+sudo nano index.php
 ```
 Copy and paste this php script into the open editor.
 ```
 <?php phpinfo(); ?>
 ```
 * Press <kbd>Ctrl-o</kbd> to save your changes.
+* Press <kbd>Enter</kbd>
 * Press <kbd>Ctrl-x</kbd> to exit the editor.
 #### Delete the index.html file.
 ```
