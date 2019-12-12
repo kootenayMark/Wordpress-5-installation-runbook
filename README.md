@@ -5,7 +5,7 @@ A complete guide to installing wordpress on your Ubuntu 16.04 server via command
 Includes installing the LAMP stack - Linux, Apache, MySql, and PHP needed to install wordpress.
 ## Requirements 
 Ubuntu 16.04 server installed and configured with sudo (administrator privileges).
-
+## It's as easy as copying and pasting each of the commands.
 # Step 1 - Install Apache2 
 Update the Ubuntu package manager
 ```
