@@ -95,7 +95,7 @@ mysql -u root -p
 ```
 CREATE DATABASE wordpress_db;
 ```
-wordpress_user is a new user_name (your choice) and PASSWORD is the password for the user (make it strong and unique).
+* wordpress_user is a new user_name (your choice) and PASSWORD is the password for the user (make it strong and unique).
 ```
 GRANT ALL PRIVILEGES ON wordpress_db.* TO 'wordpress_user'@'localhost' IDENTIFIED BY 'PASSWORD';
 ```
