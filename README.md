@@ -134,6 +134,9 @@ systemctl restart apache2
 ```
 systemctl restart mysql
 ```
-## You're all done, you can go to your server's IP adress in the browser of your choice and follow the on screen instructions to finish the installation. __http://your_server_ip_address/wordpress__
+## You're all done, you can go to your server's IP adress in the browser of your choice and follow the on screen instructions to finish the installation. 
+```
+http://your_server_ip_address/wordpress
+```
 
 
