@@ -40,9 +40,9 @@ Enter MySQL root user password (from the step above)
 5. Remove test database? yes
 6. Reload privilege tables now? yes
 # Step 3 - Install PHP 
-Install PHP 7.2
+Install PHP 7.0
 ```
-sudo apt-get install php7.0 libapache2-mod-php7.0 php7.0-mysql php7.0-curl php7.0-mbstring php7.0-gd php7.0-xml php7.0-xmlrpc php7.0-intl php7.0-soap php7.0-zip sudo apt install php7.2 libapache2-mod-php7.2 php7.2-common php7.2-sqlite php7.2-curl php7.2-intl php7.2-mbstring php7.2-xmlrpc php7.2-mysql php7.2-gd php7.2-xml php7.2-cli php7.2-zip
+sudo apt-get install php7.0 libapache2-mod-php7.0 php7.0-mysql php7.0-curl php7.0-mbstring php7.0-gd php7.0-xml php7.0-xmlrpc php7.0-intl php7.0-soap php7.0-zip 
 ```
 * Enter Y to agree to disk space requirements.
 ### we can test that PHP is installed correctly by replacing the index.html file with an info.php file 
