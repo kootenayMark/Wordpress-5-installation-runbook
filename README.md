@@ -12,7 +12,7 @@ Update the Ubuntu package manager
 sudo apt-get update
 ```
 * Enter your sudo (admin password) when prompted.
-Install Apache
+* Install Apache
 ```
 sudo apt-get install apache2
 ```
