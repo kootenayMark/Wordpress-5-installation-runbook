@@ -38,7 +38,7 @@ Enter MySQL root user password (from the step above)
 3. Remove anonymous users? yes 
 4. Disable remote login? yes
 5. Remove test database? yes
-Reload privilege tables now? yes
+6. Reload privilege tables now? yes
 # Step 3 - Install PHP 
 Install PHP 7.2
 ```
